@@ -1,0 +1,65 @@
+@import "abstract/animation";
+
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+.ani {
+    background: black;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+// Text animation 
+.text {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    list-style: none;
+    
+    
+
+
+    li {
+        display: inline-block;
+        font-size: 5rem;
+        transition: color 1.5s ease-in-out, transform .8s ease-in-out;
+        }
+    }
+
+ul.hidden li{
+    &:first-child {
+        transform: translate(-100px,-100px)  rotate(90deg);
+        transform-origin: left;
+        color: red;
+    }
+    &:nth-child(2){transform: translateY(-100px);color: green;}
+    &:nth-child(3){transform: translateY(100px);color: blue;}
+    &:nth-child(4){transform: translateY(100px);color: blue;}
+    &:nth-child(5){transform: translateY(100px);color: blue;}
+    &:last-child{
+        transform: translate(100px, 100px) rotate(-90deg);
+        transform-origin: right;
+        color: gray;
+    }
+}
+
+
+svg{
+    width: 100px;
+    height: 100px; 
+}
